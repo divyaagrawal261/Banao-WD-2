@@ -14,5 +14,11 @@ img{
 .scroll-container{
     scroll-snap-type: y mandatory;
     height: 100vh;
-    /* overflow-y: scroll; */
+}
+img{
+    z-index: 40;
+}
+.innerContainer{
+    background-size: 200% 200%;
+    background-position: center center;
 }

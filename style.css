@@ -1,0 +1,18 @@
+.container-fluid{
+    height: 100vh;
+    scroll-snap-align: start !important;
+}
+.row{
+    height: 100vh;
+}
+img{
+    width: 50%;
+}
+.col-6{
+    display: flex;
+}
+.scroll-container{
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    /* overflow-y: scroll; */
+}

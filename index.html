@@ -1,520 +1,762 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="fixedContainer" style="width: 200px; height: 200px; background-color: rgb(0, 0, 0); position: fixed; z-index: 51; top: 20%; left: 40%; border-radius: 100%;">
-<div class="innerFixedContainer" style="width: 100%; height: 100%; border-radius: 100%;background-color: blueviolet;"></div>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div
+      class="fixedContainer"
+      style="
+        width: 200px;
+        height: 200px;
+        background-color: rgb(0, 0, 0);
+        position: fixed;
+        z-index: 51;
+        top: 20%;
+        left: 40%;
+        border-radius: 100%;
+      "
+    >
+      <div
+        class="innerFixedContainer"
+        style="
+          width: 100%;
+          height: 100%;
+          border-radius: 100%;
+          background-color: blueviolet;
+        "
+      >
+      <svg version="1.1" id="transring" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 414 414"
+                style="enable-background:new 0 0 414 414;" xml:space="preserve">
+
+                <path id="Transparent_Ring" class="transrg"
+                    style="opacity:0.4;fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;enable-background:new"
+                    d="M84.2,85c31.3-31.5,74.7-51,122.7-51c95.5,0,173,77.5,173,173s-77.5,173-173,173
+                c-47.8,0-91-19.4-122.3-50.7"></path>
+
+                <path id="Opaque_Ring" class="transrgwht" stroke-dasharray="0,1000"
+                    style="fill: none; stroke: rgb(255, 255, 255); stroke-width: 2; stroke-miterlimit: 10; stroke-dasharray: 10, 1000;"
+                    d="M84.2,85c31.3-31.5,74.7-51,122.7-51c95.5,0,173,77.5,173,173s-77.5,173-173,173
+                c-47.8,0-91-19.4-122.3-50.7"></path>
+
+                <g id="Dots1" class="dots-nav">
+                    <g>
+                        <path class="dotsst dotsfill1" style="fill: rgb(0, 146, 255); opacity: 1;"
+                            d="M84,80 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 87, 80, 84,80 z"></path>
+                    </g>
+                    <g>
+                        <path class="dotsstro1"
+                            style="opacity: 1; fill: none; stroke: rgb(255, 255, 255); stroke-width: 2; stroke-miterlimit: 10;"
+                            d="M84,80c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 87, 80, 84,80 z"></path>
+                    </g>
+                </g>
+                <g id="Dots2" class="dots-nav">
+                    <g>
+                        <path class="dotsst dotsfill2" style="fill: rgb(0, 146, 255); opacity: 1;"
+                            d="M206.8,29c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6S 210.1,29, 206.8,29 z M206.8"></path>
+                    </g>
+                    <g>
+                        <path class="dotsstro2"
+                            style="opacity: 1; fill: none; stroke: rgb(255, 255, 255); stroke-width: 2; stroke-miterlimit: 10;"
+                            d="M206.8,29c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6S 210.1,29, 206.8,29 z M206.8"></path>
+                    </g>
+                </g>
+                <g id="Dots3" class="dots-nav">
+                    <g>
+                        <path class="dotsst dotsfill3" style="fill: rgb(0, 146, 255); opacity: 1;"
+                            d="M332,85 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 335,85, 332,85 z M332"></path>
+                    </g>
+                    <g>
+                        <path class="dotsstro3"
+                            style="opacity: 1; fill: none; stroke: rgb(255, 255, 255); stroke-width: 2; stroke-miterlimit: 10;"
+                            d="M332,85 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 335,85, 332,85 z M332"></path>
+                    </g>
+                </g>
+                <g id="Dots4" class="dots-nav">
+                    <g>
+                        <path class="dotsst dotsfill4" style="fill: rgb(0, 146, 255); opacity: 1;"
+                            d="M380,205 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 383,205, 380,205 z M380"></path>
+                    </g>
+                    <g>
+                        <path class="dotsstro4"
+                            style="opacity: 1; fill: none; stroke: rgb(255, 255, 255); stroke-width: 2; stroke-miterlimit: 10;"
+                            d="M380,205 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 383,205, 380,205 z M380"></path>
+                    </g>
+                </g>
+                <g id="Dots5" class="dots-nav">
+                    <g>
+                        <path class="dotsst dotsfill5" style="fill: rgb(0, 146, 255); opacity: 1;"
+                            d="M335,315 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 340,315, 335,315 z M335"></path>
+                    </g>
+                    <g>
+                        <path class="dotsstro5"
+                            style="opacity: 1; fill: none; stroke: rgb(255, 255, 255); stroke-width: 2; stroke-miterlimit: 10;"
+                            d="M335,315 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 340,315, 335,315 z M335"></path>
+                    </g>
+                </g>
+                <g id="Dots6" class="dots-nav">
+                    <g>
+                        <path class="dotsst dotsfill6" style="fill: rgb(0, 146, 255); opacity: 1;"
+                            d="M210,375 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 215,375, 210,375 z M210"></path>
+                    </g>
+                    <g>
+                        <path class="dotsstro6"
+                            style="opacity: 1; fill: none; stroke: rgb(255, 255, 255); stroke-width: 2; stroke-miterlimit: 10;"
+                            d="M210,375 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 215,375, 210,375 z M210"></path>
+                    </g>
+                </g>
+                <g id="Dots7" class="dots-nav">
+                    <g>
+                        <path class="dotsst dotsfill7" style="fill: rgb(0, 146, 255); opacity: 1;"
+                            d="M88,324 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 92,324, 88,324 z M88"></path>
+                    </g>
+                    <g>
+                        <path class="dotsstro7"
+                            style="opacity: 1; fill: none; stroke: rgb(255, 255, 255); stroke-width: 2; stroke-miterlimit: 10;"
+                            d="M88,324 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 92,324, 88,324 z M88"></path>
+                    </g>
+                </g>
+            </svg>
 </div>
-<div class="innerFixedContainer2" style="background-color: rgb(19, 19, 19); height: 100vh; width: 50%; position: fixed; right: 0px;">
-<div class="innerContainer" style="height: 100%; width: 100%; background-color: beige;"></div></div>
-    <div class="fixedContainer" style="width: 50%; height: 100vh; position: fixed; z-index: 50; background-color: rgb(0, 0, 0);">
-    <div class="innerFixedContainer" style="background-color: blueviolet; height: 100%; width: 100%;">
-    </div></div>
+    </div>
+    <div
+      class="innerFixedContainer2"
+      style="
+        background-color: rgb(19, 19, 19);
+        height: 100vh;
+        width: 50%;
+        position: fixed;
+        right: 0px;
+      "
+    >
+      <div
+        class="innerContainer"
+        style="height: 100%; width: 100%; background-color: beige"
+      ></div>
+    </div>
+    <div
+      class="fixedContainer"
+      style="
+        width: 50%;
+        height: 100vh;
+        position: fixed;
+        z-index: 50;
+        background-color: rgb(0, 0, 0);
+      "
+    >
+      <div
+        class="innerFixedContainer"
+        style="background-color: blueviolet; height: 100%; width: 100%"
+      ></div>
+    </div>
     <div class="scroll-container">
-    <section class="container-fluid page1">
+      <section class="container-fluid page1">
         <div class="row">
-            <div class="col-6 left">Page 1</div>
-            <div class="col-6 right">
-                <img src="./assets/nexgtv-entertainment-mobile-app-development.png" alt="" id="img1">
-                <img src="./assets/nexgtv-mobile-app-ui-design.png" alt="" id="img2">
-                <img src="./assets/veme-blockchain-app-developed.png" alt="" id="img4" style="position: fixed; width: 15%; bottom:0px;">
-            <img src="./assets/veme-app-ui-design.png" alt="" id="img3" style="position: fixed; width: 15%; top: 0; right: 0;">
-            <img src="./assets/measure-total-body-weight-through-fitness-app.png" alt="" style="position: fixed; width: 15%; top: -80px; right: 0;" id="img5">
-            <img src="./assets/nasa-fitness-tracking-mobile-app.png" id="img6" alt="" style="position: fixed; width: 20%; top: 20%; right: 20%;">
-            <img src="./assets/pizza_box.png" alt="" style="position: fixed; top: 0px; width: 300px;" id="img7">
-                <img src="./assets/dominos-bread.png" alt="" style="position: fixed; right:0px;top: -50px; width: 100px;" id="img8">
-                <img src="./assets/dominos-bread1.png" alt="" style="position: fixed; right:-50px;bottom: -90px; width: 390px;" id="img9">
-                <img src="./assets/domi-img1.png" alt="" style="position: fixed; left:55%;bottom: 0px; width: 250px;" id="img10">
-                <img src="./assets/ux-strategy-for-mobile-app-devlopment.png" alt="" style="position: fixed; right:5%;bottom: 190px; width: 200px;" id="img11">
-                <img src="./assets/karavan-social-networking-app-screen-2.png" alt="" style="position: fixed; bottom: -150px; right:190px; width: 15%;" id="img12">
-                <img src="./assets/karavan-social-networking-app-screen.png" alt="" style="position: fixed; top: -150px; width: 15%;" id="img13">
-                <img src="./assets/karavan_2.png" alt="" style="position: fixed; bottom: 0px; width: 15%;" id="img14">
-                <img src="./assets/developers-for-social-media-app.png" alt="" style="position: fixed; top: 30%; right: 0; width: 15%;" id="img15">
-                <img src="./assets/social-networking-app-case-study.png" alt="" style="position: fixed; top: 0px; width: 15%;right:190px;" id="img16">
-                <img src="./assets/erp-app-development-service.png" alt="" style="position: fixed; bottom: 0px; width: 45%;" id="img17">
-                <img src="./assets/melltoo-img2.png" alt="" style="position: fixed; bottom: 0px; right:250px; width: 20%;" id="img18">
-                <img src="./assets/melltoo-img1.png" alt="" style="position: fixed; bottom: 40px; right: 110px; width: 15%;" id="img19">
-            </div>
+          <div class="col-6 left">Page 1</div>
+          <div class="col-6 right">
+            <img
+              src="./assets/nexgtv-entertainment-mobile-app-development.png"
+              alt=""
+              id="img1"
+            />
+            <img
+              src="./assets/nexgtv-mobile-app-ui-design.png"
+              alt=""
+              id="img2"
+            />
+            <img
+              src="./assets/veme-blockchain-app-developed.png"
+              alt=""
+              id="img4"
+              style="position: fixed; width: 15%; bottom: 0px"
+            />
+            <img
+              src="./assets/veme-app-ui-design.png"
+              alt=""
+              id="img3"
+              style="position: fixed; width: 15%; top: 0; right: 0"
+            />
+            <img
+              src="./assets/measure-total-body-weight-through-fitness-app.png"
+              alt=""
+              style="position: fixed; width: 15%; top: -80px; right: 0"
+              id="img5"
+            />
+            <img
+              src="./assets/nasa-fitness-tracking-mobile-app.png"
+              id="img6"
+              alt=""
+              style="position: fixed; width: 20%; top: 20%; right: 20%"
+            />
+            <img
+              src="./assets/pizza_box.png"
+              alt=""
+              style="position: fixed; top: 0px; width: 300px"
+              id="img7"
+            />
+            <img
+              src="./assets/dominos-bread.png"
+              alt=""
+              style="position: fixed; right: 0px; top: -50px; width: 100px"
+              id="img8"
+            />
+            <img
+              src="./assets/dominos-bread1.png"
+              alt=""
+              style="position: fixed; right: -50px; bottom: -90px; width: 390px"
+              id="img9"
+            />
+            <img
+              src="./assets/domi-img1.png"
+              alt=""
+              style="position: fixed; left: 55%; bottom: 0px; width: 250px"
+              id="img10"
+            />
+            <img
+              src="./assets/ux-strategy-for-mobile-app-devlopment.png"
+              alt=""
+              style="position: fixed; right: 5%; bottom: 190px; width: 200px"
+              id="img11"
+            />
+            <img
+              src="./assets/karavan-social-networking-app-screen-2.png"
+              alt=""
+              style="position: fixed; bottom: -150px; right: 190px; width: 15%"
+              id="img12"
+            />
+            <img
+              src="./assets/karavan-social-networking-app-screen.png"
+              alt=""
+              style="position: fixed; top: -150px; width: 15%"
+              id="img13"
+            />
+            <img
+              src="./assets/karavan_2.png"
+              alt=""
+              style="position: fixed; bottom: 0px; width: 15%"
+              id="img14"
+            />
+            <img
+              src="./assets/developers-for-social-media-app.png"
+              alt=""
+              style="position: fixed; top: 30%; right: 0; width: 15%"
+              id="img15"
+            />
+            <img
+              src="./assets/social-networking-app-case-study.png"
+              alt=""
+              style="position: fixed; top: 0px; width: 15%; right: 190px"
+              id="img16"
+            />
+            <img
+              src="./assets/erp-app-development-service.png"
+              alt=""
+              style="position: fixed; bottom: 0px; width: 45%"
+              id="img17"
+            />
+            <img
+              src="./assets/melltoo-img2.png"
+              alt=""
+              style="position: fixed; bottom: 0px; right: 250px; width: 20%"
+              id="img18"
+            />
+            <img
+              src="./assets/melltoo-img1.png"
+              alt=""
+              style="position: fixed; bottom: 40px; right: 110px; width: 15%"
+              id="img19"
+            />
+          </div>
         </div>
-    </section>
-    <section class="container-fluid page2">
+      </section>
+      <section class="container-fluid page2">
         <div class="row">
-            <div class="col-6 left">Page 2</div>
-            <div class="col-6 right">
-            </div>
+          <div class="col-6 left">Page 2</div>
+          <div class="col-6 right"></div>
         </div>
-    </section>
-    <section class="container-fluid page3">
+      </section>
+      <section class="container-fluid page3">
         <div class="row">
-            <div class="col-6 left">Page 3</div>
-            <div class="col-6 right" style="z-index: 2;">
-            </div>
+          <div class="col-6 left">Page 3</div>
+          <div class="col-6 right" style="z-index: 2"></div>
         </div>
-    </section>
-    <section class="container-fluid page4">
+      </section>
+      <section class="container-fluid page4">
         <div class="row">
-            <div class="col-6 left">Page 4</div>
-            <div class="col-6 right">
-                
-            </div>
+          <div class="col-6 left">Page 4</div>
+          <div class="col-6 right"></div>
         </div>
-    </section>
-    <section class="container-fluid page5">
+      </section>
+      <section class="container-fluid page5">
         <div class="row">
-            <div class="col-6 left">Page 5</div>
-            <div class="col-6 right">
-                
-            </div>
+          <div class="col-6 left">Page 5</div>
+          <div class="col-6 right"></div>
         </div>
-    </section>
-    <section class="container-fluid page6">
+      </section>
+      <section class="container-fluid page6">
         <div class="row">
-            <div class="col-6 left">Page 6</div>
-            <div class="col-6 right">
-                
-            </div>
+          <div class="col-6 left">Page 6</div>
+          <div class="col-6 right"></div>
         </div>
-    </section>
-    <section class="container-fluid page7">
+      </section>
+      <section class="container-fluid page7">
         <div class="row">
-            <div class="col-6 left">Page 7</div>
-            <div class="col-6 right">
-                
-            </div>
+          <div class="col-6 left">Page 7</div>
+          <div class="col-6 right"></div>
         </div>
-    </section>
-</div>
+      </section>
+    </div>
     <script>
-        gsap.registerPlugin(ScrollTrigger);
+      gsap.registerPlugin(ScrollTrigger);
 
-        gsap.to(".innerFixedContainer",{
-            backgroundColor:"#0045bd",
-            scrollTrigger:{
-                trigger:".page1",
-                start:"top",
-                end:"10%",
-                scrub:1,
-                markers:true
-            }
-        })
-        gsap.to(".innerContainer",{
-            backgroundColor:"#140385",
-            scrollTrigger:{
-                trigger:".page1",
-                start:"top",
-                end:"10%",
-                scrub:1,
-                markers:true
-            }
-        })
-        gsap.to(".innerFixedContainer",{
-            backgroundColor:"#042257",
-            scrollTrigger:{
-                trigger:".page2",
-                start:"top",
-                end:"30%",
-                scrub:1,
-                markers:true
-            }
-        })
-        gsap.to(".innerContainer",{
-            backgroundColor:"#06002b",
-            scrollTrigger:{
-                trigger:".page2",
-                start:"top",
-                end:"30%",
-                scrub:1,
-                markers:true
-            }
-        })
-        gsap.to(".innerFixedContainer",{
-            backgroundColor:"grey",
-            scrollTrigger:{
-                trigger:".page3",
-                start:"top",
-                end:"30%",
-                scrub:1,
-                markers:true
-            }
-        })
-        gsap.to(".innerContainer",{
-            backgroundColor:"#151517",
-            scrollTrigger:{
-                trigger:".page3",
-                start:"top",
-                end:"30%",
-                scrub:1,
-                markers:true
-            }
-        })
-        gsap.to(".innerFixedContainer",{
-            backgroundColor:"#0043ba",
-            scrollTrigger:{
-                trigger:".page3",
-                start:"top",
-                end:"30%",
-                scrub:1,
-                markers:true
-            }
-        })
-        gsap.to(".innerContainer",{
-            backgroundColor:"#4dc7ff",
-            scrollTrigger:{
-                trigger:".page4",
-                start:"top",
-                end:"30%",
-                scrub:1,
-                markers:true
-            }
-        })
-        gsap.to(".innerFixedContainer",{
-            backgroundColor:"#0452db",
-            scrollTrigger:{
-                trigger:".page4",
-                start:"top",
-                end:"30%",
-                scrub:1,
-                markers:true
-            }
-        })
-        gsap.to(".innerFixedContainer",{
-            backgroundColor:"#002d7d",
-            scrollTrigger:{
-                trigger:".page5",
-                start:"top",
-                end:"30%",
-                scrub:1,
-                markers:true
-            }
-        })
-        gsap.to(".innerContainer",{
-            backgroundImage:"url(./assets/maxresdefault.jpg)",
-            scrollTrigger:{
-                trigger:".page5",
-                start:"top",
-                end:"30%",
-                scrub:1,
-                markers:true
-            }
-        })
-        gsap.to(".innerFixedContainer",{
-            backgroundColor:"green",
-            scrollTrigger:{
-                trigger:".page6",
-                start:"top",
-                end:"30%",
-                scrub:1,
-                markers:true
-            }
-        })
-        gsap.to(".innerContainer",{
-            backgroundImage:"none",
-            backgroundColor:"#039c31",
-            scrollTrigger:{
-                trigger:".page6",
-                start:"top",
-                end:"30%",
-                scrub:1,
-                markers:true
-            }
-        })
-        gsap.to("#img1",{
-            y:1000,
-            opacity:0,
-            scrollTrigger:{
-                trigger:".page1",
-                start:"top",
-                end:"30%",
-                scrub:1,
-                markers:true
-            }
-        })
+      gsap.to(".innerFixedContainer", {
+        backgroundColor: "#0045bd",
+        scrollTrigger: {
+          trigger: ".page1",
+          start: "top",
+          end: "10%",
+          scrub: 1,
+          markers: true,
+        },
+      });
+      gsap.to(".innerContainer", {
+        backgroundColor: "#140385",
+        scrollTrigger: {
+          trigger: ".page1",
+          start: "top",
+          end: "10%",
+          scrub: 1,
+          markers: true,
+        },
+      });
+      gsap.to(".innerFixedContainer", {
+        backgroundColor: "#042257",
+        scrollTrigger: {
+          trigger: ".page2",
+          start: "top",
+          end: "30%",
+          scrub: 1,
+          markers: true,
+        },
+      });
+      gsap.to(".innerContainer", {
+        backgroundColor: "#06002b",
+        scrollTrigger: {
+          trigger: ".page2",
+          start: "top",
+          end: "30%",
+          scrub: 1,
+          markers: true,
+        },
+      });
+      gsap.to(".innerFixedContainer", {
+        backgroundColor: "grey",
+        scrollTrigger: {
+          trigger: ".page3",
+          start: "top",
+          end: "30%",
+          scrub: 1,
+          markers: true,
+        },
+      });
+      gsap.to(".innerContainer", {
+        backgroundColor: "#151517",
+        scrollTrigger: {
+          trigger: ".page3",
+          start: "top",
+          end: "30%",
+          scrub: 1,
+          markers: true,
+        },
+      });
+      gsap.to(".innerFixedContainer", {
+        backgroundColor: "#0043ba",
+        scrollTrigger: {
+          trigger: ".page3",
+          start: "top",
+          end: "30%",
+          scrub: 1,
+          markers: true,
+        },
+      });
+      gsap.to(".innerContainer", {
+        backgroundColor: "#4dc7ff",
+        scrollTrigger: {
+          trigger: ".page4",
+          start: "top",
+          end: "30%",
+          scrub: 1,
+          markers: true,
+        },
+      });
+      gsap.to(".innerFixedContainer", {
+        backgroundColor: "#0452db",
+        scrollTrigger: {
+          trigger: ".page4",
+          start: "top",
+          end: "30%",
+          scrub: 1,
+          markers: true,
+        },
+      });
+      gsap.to(".innerFixedContainer", {
+        backgroundColor: "#002d7d",
+        scrollTrigger: {
+          trigger: ".page5",
+          start: "top",
+          end: "30%",
+          scrub: 1,
+          markers: true,
+        },
+      });
+      gsap.to(".innerContainer", {
+        backgroundImage: "url(./assets/maxresdefault.jpg)",
+        scrollTrigger: {
+          trigger: ".page5",
+          start: "top",
+          end: "30%",
+          scrub: 1,
+          markers: true,
+        },
+      });
+      gsap.to(".innerFixedContainer", {
+        backgroundColor: "green",
+        scrollTrigger: {
+          trigger: ".page6",
+          start: "top",
+          end: "30%",
+          scrub: 1,
+          markers: true,
+        },
+      });
+      gsap.to(".innerContainer", {
+        backgroundImage: "none",
+        backgroundColor: "#039c31",
+        scrollTrigger: {
+          trigger: ".page6",
+          start: "top",
+          end: "30%",
+          scrub: 1,
+          markers: true,
+        },
+      });
+      gsap.to("#img1", {
+        y: 1000,
+        opacity: 0,
+        scrollTrigger: {
+          trigger: ".page1",
+          start: "top",
+          end: "30%",
+          scrub: 1,
+          markers: true,
+        },
+      });
+
+      gsap.to("#img2", {
+        y: 1000,
+        opacity: 0,
+        scrollTrigger: {
+          trigger: ".page1",
+          start: "top",
+          end: "30%",
+          scrub: 1,
+          markers: true,
+        },
+      });
+
+      gsap.from("#img3", {
+        y: -500,
+        duration: 1,
+        scrollTrigger: {
+          trigger: ".page2",
+          start: "top 100%",
+          end: "0%",
+          scrub: 1,
+          markers: true,
+        },
+      });
+      gsap.from("#img4", {
+        y: 500,
+        scrollTrigger: {
+          trigger: ".page2",
+          start: "top 100%",
+          end: "0%",
+          scrub: 1,
+          markers: true,
+        },
+      });
+
+      gsap.to("#img3", {
+        z: -1000,
+        opacity: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: ".page3",
+          start: "top 100%",
+          end: "0%",
+          scrub: 1,
+          markers: true,
+        },
+      });
+      gsap.to("#img4", {
+        z: -1000,
+        opacity: 0,
+        scrollTrigger: {
+          trigger: ".page3",
+          start: "top 100%",
+          end: "0%",
+          scrub: 1,
+          markers: true,
+        },
+      });
+
+      gsap.from("#img5", {
+        y: -500,
+        duration: 1,
+        scrollTrigger: {
+          trigger: ".page3",
+          start: "top 100%",
+          end: "0%",
+          scrub: 1,
+          markers: true,
+        },
+      });
+      gsap.from("#img6", {
+        y: 500,
+        scrollTrigger: {
+          trigger: ".page3",
+          start: "top 100%",
+          end: "0%",
+          scrub: 1,
+          markers: true,
+        },
+      });
+
+      gsap.to("#img5", {
+        opacity: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: ".page4",
+          start: "top 100%",
+          end: "0%",
+          scrub: 1,
+          markers: true,
+        },
+      });
+      gsap.to("#img6", {
+        opacity: 0,
+        scrollTrigger: {
+          trigger: ".page4",
+          start: "top 100%",
+          end: "0%",
+          scrub: 1,
+          markers: true,
+        },
+      });
+
+      gsap.from("#img7", {
+        x: -500,
+        duration: 1,
+        scrollTrigger: {
+          trigger: ".page4",
+          start: "top 100%",
+          end: "0%",
+          scrub: 1,
+          markers: true,
+        },
+      });
+      gsap.from("#img8", {
+        y: -500,
+        scrollTrigger: {
+          trigger: ".page4",
+          start: "top 100%",
+          end: "0%",
+          scrub: 1,
+          markers: true,
+        },
+      });
+      gsap.from("#img9", {
+        x: 500,
+        duration: 1,
+        scrollTrigger: {
+          trigger: ".page4",
+          start: "top 100%",
+          end: "0%",
+          scrub: 1,
+          markers: true,
+        },
+      });
+      gsap.from("#img11", {
+        y: -500,
+        scrollTrigger: {
+          trigger: ".page4",
+          start: "top 100%",
+          end: "0%",
+          scrub: 1,
+          markers: true,
+        },
+      });
+      gsap.from("#img10", {
+        y: 500,
+        scrollTrigger: {
+          trigger: ".page4",
+          start: "top 100%",
+          end: "0%",
+          scrub: 1,
+          markers: true,
+        },
+      });
+      const fadeOutPage4 = ["#img7", "#img8", "#img9", "#img10", "#img11"];
+      fadeOutPage4.forEach((selector) => {
+        gsap.to(selector, {
+          opacity: 0,
+          scrollTrigger: {
+            trigger: ".page5",
+            start: "top 100%",
+            end: "0%",
+            scrub: 1,
+            markers: true,
+          },
+        });
+      });
+
+      gsap.from("#img16", {
+        y: -500,
+        scrollTrigger: {
+          trigger: ".page5",
+          start: "top 100%",
+          end: "0%",
+          scrub: 1,
+          markers: true,
+        },
+      });
+
+      gsap.from("#img12", {
+        y: 500,
+        scrollTrigger: {
+          trigger: ".page5",
+          start: "top 100%",
+          end: "0%",
+          scrub: 1,
+          markers: true,
+        },
+      });
+      gsap.from("#img13", {
+        y: -500,
+        scrollTrigger: {
+          trigger: ".page5",
+          start: "top 100%",
+          end: "0%",
+          scrub: 1,
+          markers: true,
+        },
+      });
+      gsap.from("#img14", {
+        y: 500,
+        scrollTrigger: {
+          trigger: ".page5",
+          start: "top 100%",
+          end: "0%",
+          scrub: 1,
+          markers: true,
+        },
+      });
+      gsap.from("#img15", {
+        y: 500,
+        scrollTrigger: {
+          trigger: ".page5",
+          start: "top 100%",
+          end: "0%",
+          scrub: 1,
+          markers: true,
+        },
+      });
+
+      const fadeOutPage5 = ["#img12", "#img13", "#img14", "#img15", "#img16"];
+      fadeOutPage5.forEach((selector) => {
+        gsap.to(selector, {
+          opacity: 0,
+          scrollTrigger: {
+            trigger: ".page6",
+            start: "top 100%",
+            end: "0%",
+            scrub: 1,
+            markers: true,
+          },
+        });
+      });
+
+      gsap.from("#img17", {
+        y: 500,
+        scrollTrigger: {
+          trigger: ".page6",
+          start: "top 100%",
+          end: "0%",
+          scrub: 1,
+          markers: true,
+        },
+      });
+
+      gsap.to("#img17", {
+        opacity: 0,
+        scrollTrigger: {
+          trigger: ".page7",
+          start: "top 100%",
+          end: "0%",
+          scrub: 1,
+          markers: true,
+        },
+      });
+
+      gsap.from("#img18", {
+        y: 500,
+        scrollTrigger: {
+          trigger: ".page7",
+          start: "top 100%",
+          end: "0%",
+          scrub: 1,
+          markers: true,
+        },
+      });
+
+      gsap.from("#img19", {
+        y: 500,
+        scrollTrigger: {
+          trigger: ".page7",
+          start: "top 100%",
+          end: "0%",
+          scrub: 1,
+          markers: true,
+        },
+      });
+
+      window.addEventListener('scroll', function() {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight);
+            const progress = Math.min(scrollPercent, 1) * 1000;
+
+            const opaqueRing = document.getElementById('Opaque_Ring');
+            opaqueRing.style.strokeDasharray = `${progress}, 1000`;
+        });
         
-        gsap.to("#img2",{
-            y:1000,
-            opacity:0,
-            scrollTrigger:{
-                trigger:".page1",
-                start:"top",
-                end:"30%",
-                scrub:1,
-                markers:true
-            }
-        })
-        
-        gsap.from("#img3",{
-            y:-500,
-            duration:1,
-            scrollTrigger:{
-                trigger:".page2",
-                start:"top 100%",
-                end:"0%",
-                scrub:1,
-                markers:true
-            }
-        })
-        gsap.from("#img4",{
-            y:500,
-            scrollTrigger:{
-                trigger:".page2",
-                start:"top 100%",
-                end:"0%",
-                scrub:1,
-                markers:true
-            }
-        })
-        
-        gsap.to("#img3",{
-            z:-1000,
-            opacity:0,
-            duration:1,
-            scrollTrigger:{
-                trigger:".page3",
-                start:"top 100%",
-                end:"0%",
-                scrub:1,
-                markers:true
-            }
-        })
-        gsap.to("#img4",{
-            z:-1000,
-            opacity:0,
-            scrollTrigger:{
-                trigger:".page3",
-                start:"top 100%",
-                end:"0%",
-                scrub:1,
-                markers:true
-            }
-        })
-
-        gsap.from("#img5",{
-            y:-500,
-            duration:1,
-            scrollTrigger:{
-                trigger:".page3",
-                start:"top 100%",
-                end:"0%",
-                scrub:1,
-                markers:true
-            }
-        })
-        gsap.from("#img6",{
-            y:500,
-            scrollTrigger:{
-                trigger:".page3",
-                start:"top 100%",
-                end:"0%",
-                scrub:1,
-                markers:true
-            }
-        })
-
-        
-        
-        gsap.to("#img5",{
-            opacity:0,
-            duration:1,
-            scrollTrigger:{
-                trigger:".page4",
-                start:"top 100%",
-                end:"0%",
-                scrub:1,
-                markers:true
-            }
-        })
-        gsap.to("#img6",{
-            opacity:0,
-            scrollTrigger:{
-                trigger:".page4",
-                start:"top 100%",
-                end:"0%",
-                scrub:1,
-                markers:true
-            }
-        })
-
-        gsap.from("#img7",{
-            x:-500,
-            duration:1,
-            scrollTrigger:{
-                trigger:".page4",
-                start:"top 100%",
-                end:"0%",
-                scrub:1,
-                markers:true
-            }
-        })
-        gsap.from("#img8",{
-            y:-500,
-            scrollTrigger:{
-                trigger:".page4",
-                start:"top 100%",
-                end:"0%",
-                scrub:1,
-                markers:true
-            }
-        })
-        gsap.from("#img9",{
-            x:500,
-            duration:1,
-            scrollTrigger:{
-                trigger:".page4",
-                start:"top 100%",
-                end:"0%",
-                scrub:1,
-                markers:true
-            }
-        })
-        gsap.from("#img11",{
-            y:-500,
-            scrollTrigger:{
-                trigger:".page4",
-                start:"top 100%",
-                end:"0%",
-                scrub:1,
-                markers:true
-            }
-        })
-        gsap.from("#img10",{
-            y:500,
-            scrollTrigger:{
-                trigger:".page4",
-                start:"top 100%",
-                end:"0%",
-                scrub:1,
-                markers:true
-            }
-        })
-        const fadeOutPage4=["#img7", "#img8", "#img9", "#img10", "#img11"]
-        fadeOutPage4.forEach(selector=>{gsap.to(selector,{
-            opacity:0,
-            scrollTrigger:{
-                trigger:".page5",
-                start:"top 100%",
-                end:"0%",
-                scrub:1,
-                markers:true
-            }
-        })})
-
-        gsap.from("#img16",{
-            y:-500,
-            scrollTrigger:{
-                trigger:".page5",
-                start:"top 100%",
-                end:"0%",
-                scrub:1,
-                markers:true
-            }
-        })
-
-        gsap.from("#img12",{
-            y:500,
-            scrollTrigger:{
-                trigger:".page5",
-                start:"top 100%",
-                end:"0%",
-                scrub:1,
-                markers:true
-            }
-        })
-        gsap.from("#img13",{
-            y:-500,
-            scrollTrigger:{
-                trigger:".page5",
-                start:"top 100%",
-                end:"0%",
-                scrub:1,
-                markers:true
-            }
-        })
-        gsap.from("#img14",{
-            y:500,
-            scrollTrigger:{
-                trigger:".page5",
-                start:"top 100%",
-                end:"0%",
-                scrub:1,
-                markers:true
-            }
-        })
-        gsap.from("#img15",{
-            y:500,
-            scrollTrigger:{
-                trigger:".page5",
-                start:"top 100%",
-                end:"0%",
-                scrub:1,
-                markers:true
-            }
-        })
-
-        const fadeOutPage5=["#img12", "#img13", "#img14", "#img15", "#img16"]
-        fadeOutPage5.forEach(selector=>{gsap.to(selector,{
-            opacity:0,
-            scrollTrigger:{
-                trigger:".page6",
-                start:"top 100%",
-                end:"0%",
-                scrub:1,
-                markers:true
-            }
-        })})
-
-        gsap.from("#img17",{
-            y:500,
-            scrollTrigger:{
-                trigger:".page6",
-                start:"top 100%",
-                end:"0%",
-                scrub:1,
-                markers:true
-            }
-        })
-
-        gsap.to("#img17",{
-            opacity:0,
-            scrollTrigger:{
-                trigger:".page7",
-                start:"top 100%",
-                end:"0%",
-                scrub:1,
-                markers:true
-            }
-        })
-
-        gsap.from("#img18",{
-            y:500,
-            scrollTrigger:{
-                trigger:".page7",
-                start:"top 100%",
-                end:"0%",
-                scrub:1,
-                markers:true
-            }
-        })
-
-        gsap.from("#img19",{
-            y:500,
-            scrollTrigger:{
-                trigger:".page7",
-                start:"top 100%",
-                end:"0%",
-                scrub:1,
-                markers:true
-            }
-        })
-
     </script>
-</body>
+  </body>
 </html>
